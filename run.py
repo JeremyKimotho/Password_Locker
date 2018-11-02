@@ -117,7 +117,7 @@ def main():
                   print('Here are your passwords')
                   print('\n')
 
-                  for passwords in display_passwords():
+                  for PasswordsInfo in display_passwords():
                     print(f'For {passwords.site} your username is {passwords.site_username} and password {passwords.site_password}')
                   print('\n')
                 else:
