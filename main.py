@@ -29,4 +29,9 @@ class PasswordInfo:
   '''
   Passwords=[]
 
+  def __init__(self, site, site_username, site_password):
+    self.site = site
+    self.site_username = site_username
+    self.site_password = site_password
+
   
