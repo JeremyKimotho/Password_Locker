@@ -57,64 +57,116 @@ def display_passwords():
   '''
   Function that returns all saved contacts
   '''
-  return PasswordInfo.Passwords()
+  return PasswordInfo.display_passwords()
 
 def main():
-  print('Hello Welcome to password locker. To login to your account type Y, to create an account type N')
-    
-    response=input()
+  while True:
+    print('Hello Welcome to password locker. To login to your account type Y, to create an account type N, to exit type E')
+      
+      response=input()
 
-    if response == 'Y':
-      print('Please enter your username')
-        username=input()
-      print('Please enter your password')
-        password=input()
+      if response == 'Y':
+        print('Please enter your username')
+          username=input()
+        print('Please enter your password')
+          password=input()
 
-        if username in Users and password in Users:
+          if username in Users and password in Users:
 
-          print(f'Welcome {username}!')
-          print('\n')
+            print(f'Welcome {username}!')
+            print('\n')
 
-          while True:
-            print('Use these short codes: cp-create a new password with generation, cpg-create a new password with password generation, dp-display passwords, ex-exit the password locker.')
+            while True:
+              print('Use these short codes: cp-create a new password with generation, cpg-create a new password with password generation, dp-display passwords, ex-exit the password locker.')
 
-            short_code=input().lower()
+              short_code=input().lower()
 
-            if short_code == 'cp':
-            print('What is the site?')
-              site=input()
-            print('What is your username on this site?')
-              site.username=input()
-            print('Enter a password')
-              password_1=input()
-            print('Confirm password')
-              password_2=input()
-
-              if password_1 != password_2: 
-                print('Your passwords did not match')
-                print('Please re-enter your password')
-                  password_1=input()
-                print('Please confirm your password')
-                  password_2=input()
-
-                  save_passwords(site, site. username, password_1)
-              else:
-                save_passwords(site, site.username, password_1)
-
-            elif short_code == 'cpg':
+              if short_code == 'cp':
               print('What is the site?')
                 site=input()
               print('What is your username on this site?')
                 site.username=input()
-              print('How many characters would you like it to have? (Between 1-14)')
-                characters=input()
+              print('Enter a password')
+                password_1=input()
+              print('Confirm password')
+                password_2=input()
 
-                save_passwords(password_generator(site, site.username, characters))
+                if password_1 != password_2: 
+                  print('Your passwords did not match')
+                  print('Please re-enter your password')
+                    password_1=input()
+                  print('Please confirm your password')
+                    password_2=input()
 
-            elif short_code == 'dp':
+                    save_passwords(site, site. username, password_1)
+                else:
+                  save_passwords(site, site.username, password_1)
+
+              elif short_code == 'cpg':
+                print('What is the site?')
+                  site=input()
+                print('What is your username on this site?')
+                  site.username=input()
+                print('How many characters would you like it to have? (Between 1-14)')
+                  characters=input()
+
+                  save_passwords(password_generator(site, site.username, characters))
+
+              elif short_code == 'dp':
+                if display_passwords():
+                  print('Here are your passwords')
+                  print('\n')
+
+                  for passwords in display_passwords():
+                    print(f'For {passwords.site} your username is {passwords.site_username} and password {passwords.site_password}')
+                  print('\n')
+                else:
+                  print('\n')
+                  print('You don\'t have any passwords to show')
+                  print('\n')
+
+              elif short_code == 'ex':
+                print('I\'ll miss you.....)
+                break
+
+              else:
+                print('I didn\'t quite get that, please refer to the shortcodes.')
+                break
+
+          else:
+            print('That is an incorrect username or password')
+            break
+        
+      elif response == 'N':
+        print('Please enter a username')
+          username=input()
+        print('Please enter a password')
+          password_1=input()
+        print('Please confirm your password')
+          password_2-input()
+
+          if password_1 != password_2:
+            print('Your passwords didn\'t match')
+            print('Please enter a password')
+            print('Please confirm password')
+            save_users(create_user(username, password_1))
+            print('You\'re now able to login')
+            break
+          else:
+            save_users(create_user(username, password_1))
+            print('You\'re now able to login')
+            break
+
+      elif response == 'E':
+        print('Sad to see you go!')
+        break
+      
+      else:
+        print('I don\'t understand that, I\'ll assume you\'re saying goodbye. Sad to see you go!' )
 
 
-    
+
+      
 
 
 

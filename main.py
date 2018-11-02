@@ -50,5 +50,12 @@ class PasswordInfo:
   def copy_password(cls, number):
     pyperclip.copy(number)
 
+  @classmethod
+  def display_passwords(cls):
+    '''
+    Method that returns the passwords
+    '''
+    return cls.Passwords
+
 
   
