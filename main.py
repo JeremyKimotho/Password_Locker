@@ -22,4 +22,11 @@ class UserInfo:
     this method will delete my users info
     '''
     UserInfo.Users.remove(self)
-    
+
+class PasswordInfo:
+  '''
+  Class that generates when a user would like to add or delete or view a password they have stored
+  '''
+  Passwords=[]
+
+  

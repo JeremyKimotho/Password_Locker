@@ -53,7 +53,7 @@ class TestData(unittest.TestCase):
     test_user = UserInfo('Test', 'Tester')
     test_user.user_save()
     self.new_user.user_delete()
-    self.assertEqual(len,(UserInfo.Users),1)
+    self.assertEqual(len(UserInfo.Users),1)
 
 if __name__ == '__main__':
   unittest.main()
