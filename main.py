@@ -27,7 +27,7 @@ class PasswordInfo:
   '''
   Class that generates when a user would like to add or delete or view a password they have stored
   '''
-  Passwords=[]
+  Passwords = []
 
   def __init__(self, site, site_username, site_password):
     self.site = site
@@ -35,9 +35,9 @@ class PasswordInfo:
     self.site_password = site_password
 
   def password_save(self):
-     '''
-     this method saves a password details objects into the Passwords list
-     '''
-     PasswordInfo.Passwords.append(self)
+    '''
+    this method saves a password details objects into the Passwords list
+    '''
+    PasswordInfo.Passwords.append(self)
 
   

@@ -97,7 +97,7 @@ class TestPassword(unittest.TestCase):
     '''
     self.new_password.password_save()
     test_password = PasswordInfo('Te', 'Tes', 'Test')
-    test_password.password_save
+    test_password.password_save()
     self.assertEqual(len(PasswordInfo.Passwords),2)
 
 if __name__ == '__main__':
