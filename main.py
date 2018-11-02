@@ -16,3 +16,10 @@ class UserInfo:
     this method will save my users info
     '''
     UserInfo.Users.append(self)
+
+  def user_delete(self):
+    '''
+    this method will delete my users info
+    '''
+    UserInfo.Users.remove(self)
+    

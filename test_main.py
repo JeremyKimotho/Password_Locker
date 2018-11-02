@@ -52,7 +52,7 @@ class TestData(unittest.TestCase):
     self.new_user.user_save()
     test_user = UserInfo('Test', 'Tester')
     test_user.user_save()
-    self.new_user.delete_contact()
+    self.new_user.user_delete()
     self.assertEqual(len,(UserInfo.Users),1)
 
 if __name__ == '__main__':
