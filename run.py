@@ -164,7 +164,10 @@ def main():
       else:
         print('I don\'t understand that, I\'ll assume you\'re saying goodbye. Sad to see you go!' )
 
+if __name__=='__main__':
+    main()
 
+    
 
       
 
