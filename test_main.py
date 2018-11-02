@@ -36,5 +36,14 @@ class TestData(unittest.TestCase):
     self.new_user.user_save()
     self.assertEqual(len(UserInfo.Users),1)
 
+  def test_multiple_user_save(self):
+    '''
+    this test case will be used to test if multiple users can be saved if need be 
+    '''
+    self.new_user.user_save()
+    test_user = UserInfo('Test', 'Tester')
+    test_user.user_save()
+    self.assertEqual(len(UserInfo.Users),2)
+
 if __name__ == '__main__':
   unittest.main()
