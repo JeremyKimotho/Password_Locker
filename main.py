@@ -34,4 +34,10 @@ class PasswordInfo:
     self.site_username = site_username
     self.site_password = site_password
 
+  def password_save(self):
+     '''
+     this method saves a password details objects into the Passwords list
+     '''
+     PasswordInfo.Passwords.append(self)
+
   

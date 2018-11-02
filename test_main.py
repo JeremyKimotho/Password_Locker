@@ -84,5 +84,21 @@ class TestPassword(unittest.TestCase):
     self.assertEqual(self.new_password.site_username,'jkim')
     self.assertEqual(self.new_password.site_password,'12345')
 
+  def test_save_password(self):
+    '''
+    this test case is being used to test if the passwords are being saved correctly, along with the associating site and username info
+    '''
+    self.new_password.password_save()
+    self.assertEqual(len(PasswordInfo.Passwords),1)
+
+  def test_multiple_password_save(self):
+    '''
+    this test case is to ensure it's possible to save multiple passwords 
+    '''
+    self.new_password.password_save()
+    test_password = PasswordInfo('Te', 'Tes', 'Test')
+    test_password.password_save
+    self.assertEqual(len(PasswordInfo.Passwords),2)
+
 if __name__ == '__main__':
   unittest.main()
