@@ -45,5 +45,15 @@ class TestData(unittest.TestCase):
     test_user.user_save()
     self.assertEqual(len(UserInfo.Users),2)
 
+  def test_delete_user(self):
+    '''
+    this test case to make sure a user can be deleted
+    '''
+    self.new_user.user_save()
+    test_user = UserInfo('Test', 'Tester')
+    test_user.user_save()
+    self.new_user.delete_contact()
+    self.assertEqual(len,(UserInfo.Users),1)
+
 if __name__ == '__main__':
   unittest.main()
