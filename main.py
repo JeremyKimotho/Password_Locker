@@ -40,4 +40,10 @@ class PasswordInfo:
     '''
     PasswordInfo.Passwords.append(self)
 
+  def password_delete(self):
+    '''
+    this method makes it possible to delete any passwords we may not want anymore
+    '''
+    PasswordInfo.Passwords.remove(self)
+
   

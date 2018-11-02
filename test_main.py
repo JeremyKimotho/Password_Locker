@@ -100,5 +100,15 @@ class TestPassword(unittest.TestCase):
     test_password.password_save()
     self.assertEqual(len(PasswordInfo.Passwords),2)
 
+  def test_password_delete(self):
+    '''
+    this test case is to make usre that if need be, a password can be deleted.
+    '''
+    self.new_password.password_save()
+    test_password=PasswordInfo('Te', 'Tes', 'Test')
+    test_password.password_save()
+    self.new_password.password_delete()
+    self.assertEqual(len(PasswordInfo.Passwords),1)
+
 if __name__ == '__main__':
   unittest.main()
