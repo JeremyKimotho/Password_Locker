@@ -46,4 +46,9 @@ class PasswordInfo:
     '''
     PasswordInfo.Passwords.remove(self)
 
+  @classmethod
+  def copy_password(cls, number):
+    pyperclip.copy(number)
+
+
   

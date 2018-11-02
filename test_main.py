@@ -110,5 +110,13 @@ class TestPassword(unittest.TestCase):
     self.new_password.password_delete()
     self.assertEqual(len(PasswordInfo.Passwords),1)
 
+  def test_copy_password(self):
+    '''
+    this is a test to confirm that the pyperclip module is correctly copying the password
+    '''
+    self.new_password.password_save()
+    PasswordInfo.copy_password('12345')
+    self.assertEqual(self.new_password.site_password, pyperclip.paste())
+
 if __name__ == '__main__':
   unittest.main()
