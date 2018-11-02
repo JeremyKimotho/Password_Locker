@@ -10,4 +10,9 @@ class UserInfo:
   def __init__(self, username, password):
     self.username = username
     self.password = password 
-    
+
+  def user_save(self):
+    '''
+    this method will save my users info
+    '''
+    UserInfo.Users.append(self)

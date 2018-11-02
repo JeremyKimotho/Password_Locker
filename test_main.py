@@ -33,8 +33,8 @@ class TestData(unittest.TestCase):
     '''
     this test case will be testing if saving a users username and password is possible and done into the user object
     '''
-    self.new_user.save_user()
+    self.new_user.user_save()
     self.assertEqual(len(UserInfo.Users),1)
-    
+
 if __name__ == '__main__':
   unittest.main()
