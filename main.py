@@ -23,6 +23,13 @@ class UserInfo:
     '''
     UserInfo.Users.remove(self)
 
+  @classmethod
+  def find_user(cls,username):
+    for users in cls.Users:
+      if users.username == username:
+        return users
+
+
 class PasswordInfo:
   '''
   Class that generates when a user would like to add or delete or view a password they have stored
@@ -57,5 +64,4 @@ class PasswordInfo:
     '''
     return cls.Passwords
 
-
-  
+ 
