@@ -25,9 +25,12 @@ class UserInfo:
 
   @classmethod
   def find_user(cls,username):
+    '''
+    this method loops through the users array and checks if a user exists
+    '''
     for users in cls.Users:
       if users.username == username:
-        return users
+        return True
 
 
 class PasswordInfo:
