@@ -22,7 +22,7 @@ Generating a password for a user | `True`
 ## Known Bugs
 There are no know bugs but if something arises please let me know.
 ## Technologies Used
-{Tell me about the languages and tools you used to create this app. Assume that I know you probably used HTML and CSS. If you did something really cool using only HTML, point that out.}
+* Python
 ## Support and contact details
 You can reach me on jeremykimotho@yahoo.com
 ## License
