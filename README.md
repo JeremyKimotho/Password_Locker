@@ -1,21 +1,27 @@
-# {Jeremy Kimotho}
-#### {Brief description of application}, {Date of current version}
-#### By **{List of contributors}**
+# Password Locker
+#### An application that stores a users passwords, 04/11/2018
+#### By **Jeremy Kimotho**
 ## Description
-{This is a detailed description of your application, including its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }
+This is an application that stores a users passwords and can if required, generate a password as well. A user must first make an account, this is how we confirm their credentials. They enter a username and a global password. They will now be able to login and use the password locker. A user once logged in is given a few options to choose, which they will do so with short codes. These options are to display existing contacts they have previously added, enter new password details without generation of a password (they're entering one themselves) or enter new password details with password generation. The details of the password are the site, their username on the pasrticular site, and ofcourse the password.
+## BDD
+Behaviour: Our program should handle | Does it?
+--- |  ---
+Creating a user account | `True` 
+Verifying a user trying to login  | `True` 
+Entering password details | `True` 
+Displaying already inputted password details | `True` 
+Generating a password for a user | `True` 
+
 ## Setup/Installation Requirements
-* This is a great place
-* to list setup instructions
-* in a simple
-* easy-to-understand
-* format
-{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? Do I need to install any dependencies? How should I set up my databases? Is there other code this app depends on?}
+* Open your default web browser, internet connection is required 
+* Search For jeremykimotho on github and click on the repository passwordlocker
+* Clone the repository into your machine and run the run.py file in your terminal
+* No other downloads or plug-ins are required to view this python application 
+* Give feedback through the contacts found below and report any bugs experienced 
+
 ## Known Bugs
-{Are there issues that have not yet been resolved that you want to let users know you know? Outline any issues that would impact use of your application. Share any workarounds that are in place. }
+There are no know bugs but if something arises please let me know.
 ## Technologies Used
 {Tell me about the languages and tools you used to create this app. Assume that I know you probably used HTML and CSS. If you did something really cool using only HTML, point that out.}
 ## Support and contact details
-{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}
-### License
-*{Determine the license under which this application can be used.  See below for more details on licensing.}*
-Copyright (c) {year} **{List of contributors or company name}**
+You can reach me on jeremykimotho@yahoo.com
